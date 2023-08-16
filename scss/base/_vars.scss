@@ -1,0 +1,29 @@
+$primary: rgb(245, 242, 144);
+
+@mixin coverBg() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin svgFill() {
+  &:hover {
+    fill: lighten($primary, 15%);
+  }
+
+  &:active {
+    fill: darken($primary, 15%);
+  }
+}
+
+@mixin svgStroke() {
+  &:hover {
+    stroke: lighten($primary, 15%);
+  }
+}
+
+@mixin mediaPhone {
+  @media screen and (max-width: 450px) {
+      @content;
+  }
+}
